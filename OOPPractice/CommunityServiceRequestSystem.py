@@ -82,10 +82,15 @@ for req in requests:
     elif isinstance(req,ServiceRequest):
         print(f'Request {req.number} is a Service Request')
 
-if isinstance(servReq1, object):
-    print(f"servReq1 is an instance of Python's object class")
+
+#Part 8: The lines below demonstrate the relationship between one of my objects fundReq and pythons
+#object class. When running the next couple of lines, we print "fundReq is an instance of Python's object class".
+#In doing so, we are able to prove that our object, is an instance of python objects class, but it also allows us to
+#understand that pythons object class is a blueprint for classes and objects created from it.
+if isinstance(fundReq, object):
+    print(f"fundReq is an instance of Python's object class")
 else:
-    print(f"servReq1 isn't an instance of Python's object class")
+    print(f"fundReq isn't an instance of Python's object class")
 
 
 
