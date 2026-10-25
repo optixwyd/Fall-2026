@@ -74,13 +74,16 @@ for req in requests:
 
 for req in requests:
     if isinstance(req, TechnologyRequest):
-        print(f'Request {req.number} is a Technology Request')
-    elif isinstance(req, FacilitiesRequest):
-        print(f'Request {req.number} is a Facilities Request')
-    elif isinstance(req, FundRequest):
-        print(f'Request {req.number} is a Fund Request')
-    elif isinstance(req,ServiceRequest):
-        print(f'Request {req.number} is a Service Request')
+        print(f"Request {req.number} is a Technology Request")
+
+    if isinstance(req, FacilitiesRequest):
+        print(f"Request {req.number} is a Facilities Request")
+
+    if isinstance(req, FundRequest):
+        print(f"Request {req.number} is a Fund Request")
+
+    if isinstance(req, ServiceRequest):
+        print(f"Request {req.number} inherits from ServiceRequest")
 
 
 #Part 8: The lines below demonstrate the relationship between one of my objects fundReq and pythons
