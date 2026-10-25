@@ -123,7 +123,7 @@ for req in experiment:
 #Q: How did Python determine which version of get_summary() to execute even though the loop
 #used the same method call for every object?
 
-#Python determined the version of get_summary() to execute because we can override methods.Inside each subclass,
+#Python determined the version of get_summary() to execute because we can override methods. Inside each subclass,
 #although we inherit attributes and methods from the superclass, ultimately what is written within the subclass
 #for that objects method will be used. Ultimately, this a clear example of polymorphism, or dynamic binding, which
 #allows python to determine which get_summary() to use, based on the class of the object at runtime.
