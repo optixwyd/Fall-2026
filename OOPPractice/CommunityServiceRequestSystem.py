@@ -5,7 +5,7 @@ class ServiceRequest:
         self.description = description
 
     def get_summary(self):
-        print(f'___________________________________\n'
+        return(f'___________________________________\n'
               f'{self.name} created Ticket #{self.number}.\n'
               f'Request: {self.description}')
 
@@ -15,7 +15,7 @@ class TechnologyRequest(ServiceRequest):
         self.device = device
 
     def get_summary(self):
-        print(f'___________________________________\n'
+        return(f'___________________________________\n'
               f'{self.name} created Ticket #{self.number}.\n'
               f'Device: {self.device}\n'
               f'Issue: {self.description}')
@@ -27,7 +27,7 @@ class FacilitiesRequest(ServiceRequest):
         self.location = location
 
     def get_summary(self):
-        print(f'___________________________________\n'
+        return(f'___________________________________\n'
               f'{self.name} created Ticket #{self.number}\n'
               f'Location: {self.location}\n'
               f'Description: {self.description}')
@@ -39,9 +39,9 @@ class FundRequest(ServiceRequest):
         self.amount = amount
 
     def get_summary(self):
-        print(f'___________________________________\n'
+        return(f'___________________________________\n'
               f'{self.name} created Ticket #{self.number}\n'
-              f'Advisor: {self.amount}\n'
+              f'Amount: {self.amount}\n'
               f'Description: {self.description}')
 
 servReq1 = ServiceRequest("John Adam",
@@ -70,4 +70,4 @@ fundReq = FundRequest("Dan White",
 requests = [servReq1, techReq1, techReq2, facReq1, facReq2, fundReq]
 
 for req in requests:
-    req.get_summary()
+    print(req.get_summary())
